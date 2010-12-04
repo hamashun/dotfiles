@@ -12,10 +12,16 @@ set ts=2
 set sw=2
 
 " オートインデント
-set autoindent
+"set autoindent
+
+" オートインデントしない
+set noautoindent
+
+" ペーストモードしない
+set nopaste
 
 " ペーストでうまいこと
-set paste
+"set paste
 
 " back spaceキーで色々消せる
 set backspace=2
@@ -49,7 +55,10 @@ set nu
 set cmdheight=1
 
 "ステータス行の高さ
-set laststatus=1
+set laststatus=2
+
+" ステータスライン表示
+:set statusline=%F%M%R%=%{&fileencoding} 
 
 " 折り返し表示
 set wrap
@@ -60,9 +69,14 @@ set wrap
 " 縦線
 ":set cursorcolumn
 
+
+
 " 全角スペースの表示
 :highlight ZenkakuSpace cterm=underline ctermfg=magenta guibg=darkgray
 match ZenkakuSpace /　/
+
+
+
 
 
 
@@ -84,7 +98,7 @@ set ignorecase
 
 
 " 保存と同時に行末の半角スペースを削除
-function RTrim()
+function! RTrim()
 %s/\s\+$//e
 endfunction
 autocmd BufWritePre *.html,*.css,*.js,*.inc call RTrim()
@@ -94,6 +108,8 @@ autocmd BufWritePre *.html,*.css,*.js,*.inc call RTrim()
 " 次のバッファ
 nmap <C-\> :bn
 
+" 前のバッファ
+nmap <C-^</ :bp>>
 
 
 " ■文字コード
