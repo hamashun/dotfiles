@@ -42,7 +42,8 @@ set showmode
 syntax on
 
 " ■色
-:colorscheme delek
+:colorscheme desert
+":colorscheme delek
 ":colorscheme pablo
 
 " ルーラー
