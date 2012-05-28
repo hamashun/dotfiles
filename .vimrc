@@ -117,3 +117,7 @@ nmap <C-^</ :bp>>
 " 文字コードがUTF8でうまく認識されない時
 "set enc=utf8
 
+" UTF-8でうまいこと
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,euc-jp,iso-2022-jp,utf-8,cp932 
